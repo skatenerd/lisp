@@ -3,7 +3,7 @@ require './lisp'
 
 
 describe '#lisp_eval' do
-  describe "CHALLENGE 1", pending: true do
+  describe "CHALLENGE 1" do
     it "lisp_evaluates numbers" do
       lisp_eval("1").should == 1
     end
@@ -11,9 +11,13 @@ describe '#lisp_eval' do
     it "lisp_evaluates booleans" do
       lisp_eval("#t").should == true
     end
+
+    it "lisp_evaluates booleans" do
+      lisp_eval("#f").should == false
+    end
   end
 
-  describe "CHALLENGE 2", pending: true  do
+  describe "CHALLENGE 2" do
     it "lisp_evaluates addition" do
       lisp_eval("(+ 1 2)").should == 3
     end
@@ -23,7 +27,7 @@ describe '#lisp_eval' do
     end
   end
 
-  describe "CHALLENGE 3", pending: true  do
+  describe "CHALLENGE 3" do
     it "lisp_evaluates nested arithmetic" do
       lisp_eval("(+ 1 (* 2 3))").should == 7
     end
@@ -39,7 +43,7 @@ describe '#lisp_eval' do
   describe "CHALLENGE 5", pending: true  do
     it "lisp_evaluates top-level defs" do
       lisp_eval("(def x 3)
-                 (+ x 1)").should == 4
+                 (+ x 1)")should == 4
     end
   end
 
